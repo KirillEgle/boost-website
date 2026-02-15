@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+<div class="bodys">
+<header class="header">
+    <div class="logo">
+        <img src="image/logoNoBG.png" alt="LOGO" width="200px" style="margin-left: 50px;">
+    </div>
+    <!--<span style="width: 100px; height: 40px; text-align: center; margin-left: 100px; margin-top: 20px;"><a href="#" style="padding: 0;color: #25553e;font-weight: 900;font-size: 20px; text-decoration: none;">$0</a></span>-->
+    <div class="right">
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            
+            <!-- <a href="#">Help</a> -->
+        </nav>
+
+        <div class="logins">
+            <a href="login.html" class="log active">Login</a>
+            <a href="register.html" class="reg" onclick="locatiom.href='register.html'">Register</a>
+            <div class="move-border"></div>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <h1 >Do you<br><span>NEED</span><br>boost?</h1>
+    <a href="shop.html" class="get-start">Get bossted</a>
+
+</section>
+</div>
+<div class="what-we-can">
+    <h2>ЧТО МЫ ГАРАНТИРУЕМ</h2>
+    <div class="guarantees">
+        <div class="guarantee">
+            <img src="image/icons/login.png" alt="">
+            <p>Мы НЕ используем читы</p>
+        </div>
+        <div class="guarantee">
+            <img src="image/icons/login.png" alt="">
+            <p>Ручная игра</p>
+        </div>
+        <div class="guarantee">
+            <img src="image/icons/login.png" alt="">
+            <p>Возврат в случае блокировки</p>
+        </div>
+
+    </div>
+    
+</div>
+<footer class="footer">
+    <div class="footer-col">
+        <h2>О нас</h2>
+        <p>Мы — современный каталог продуктов с удобным интерфейсом и честными ценами.</p>
+    </div>
+
+    <div class="footer-col">
+        <h2>Навигация</h2>
+        <ul>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Новинки</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col">
+        <h2>Поддержка</h2>
+        <ul>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+        </ul>
+    </div>
+</footer>
+<script>
+const buttons = document.querySelectorAll('.logins a');
+const border = document.querySelector('.move-border');
+
+function moveBorder(btn) {
+    const rect = btn.getBoundingClientRect();
+    const parentRect = btn.parentElement.getBoundingClientRect();
+
+    border.style.left = rect.left - parentRect.left + 'px';
+    border.style.top = rect.top - parentRect.top + 'px';
+    border.style.width = rect.width + 'px';
+    border.style.height = rect.height + 'px';
+
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+
+window.addEventListener('load', () => {
+    moveBorder(document.querySelector('.logins .active'));
+});
+
+
+buttons.forEach(btn => {
+    btn.addEventListener('mouseenter', () => moveBorder(btn));
+});
+</script>
+
+</body>
+</html>

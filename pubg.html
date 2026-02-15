@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="../style/shop.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+    <div class="logo">
+        <img src="image/logoNoBG.png" alt="LOGO" width="200px" style="margin-left: 50px;">
+    </div>
+
+    <div class="right">
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            
+            <a href="#">Help</a>
+        </nav>
+
+        <div class="logins">
+            <a href="login.html" class="log active">Login</a>
+            <a href="register.html" class="reg" onclick="locatiom.href='register.html'">Register</a>
+            <div class="move-border"></div>
+        </div>
+    </div>
+    </header>
+    <!--Modal-->
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+
+                    <div class="modal-body" id="modalBody"></div>
+                </div>
+            </div>
+    <div class="main-content">
+        <div class="catalogue">
+            <div>
+                <h2 >Games</h2>
+                <li><a href="shop.html">Dota 2</a></li>
+                <li><a href="counters.html">Counter Strike 2</a></li>
+                <li><a href="leagueofl.html">League of Legends</a></li>
+                <li><a href="pubg.html">Pubg</a></li>
+                <li><a href="pubgm.html">Pubg Mobile</a></li>
+                <li><a href="fortnite.html">Fortnite</a></li>
+            </div>
+        </div>
+        <div class="products">
+            
+            <div>
+                
+                <h2>Rank Boost</h2>
+                <li>Solo Boost</li>
+                <li>EU server</li>
+                <button data-modal="MMR">Детальнее</button>
+
+                
+                <template id="MMR">
+                    <h2>Rank Boost</h2>
+                    <li>Bronze -> Silver - 20$</li>
+                    <li>Silver -> Gold - 30$</li>
+                    <li>Gold -> Platinum - 45$</li>
+                    <li>Platinum -> Diamond - 65$</li>
+                    <li>Diamond -> Master - 90$</li>
+                    <p>Solo / Duo / Sqad</p>
+                    <p>EU сервера</p>
+                    <p>FPP / TPP на выбор</p>
+                    <button>Заказать</button>
+                </template>
+            </div>
+            <div>
+                
+                <h2>RP Boost</h2>
+                <li>+500 RP</li>
+                <li>+1000 RP</li>
+                <li>+2000 RP</li>
+                <button data-modal="Cal">Детальнее</button>
+
+                <!--More-->
+                <template id="Cal">
+                    <h2>RP Boost</h2>
+                    <li>+500 RP - 15$</li>
+                    <li>+1000 RP - 28$</li>
+                    <li>+2000 RP - 50$</li>
+                    <button>Заказать</button>
+                </template>
+            </div>
+            <div>
+                <!-- Face -->
+                <h2>WIN Boost</h2>
+                <li>5 / 10 / 20 побед</li>
+                <li>Соло или Пати</li>
+                <li>Без резких скачков</li>
+                <button data-modal="Win">Детальнее</button>
+
+                <!--More-->
+                <template id="Win">
+                    <h2>WIN Boost</h2>
+                    <li>5 побед - 12$</li>
+                    <li>10 побед - 22$</li>
+                    <li>20 побед - 40$</li>
+                    <button>Заказать</button>
+                </template>
+            </div>
+            <div>
+                <!-- Face -->
+                <h2>Placement Matches</h2>
+                <li>5 / 10 матчей</li>
+                <li>С границей ранга</li>
+                <button data-modal="Role">Детальнее</button>
+
+                <!--More-->
+                <template id="Role">
+                    <h2>Placement Matches</h2>
+                    <li>5 placement игр - 15$</li>
+                    <li>10 placement игр - 28$</li>
+                    <li>С границей ранга - 38$</li>
+                    <button>Заказать</button>
+                </template>
+            </div>
+            <div>
+                <!-- Face -->
+                <h2>Duo / Sqad</h2>
+                <li>5 / 10 / 20 игр</li>
+                <li>Поднятие винрейта</li>
+                <button data-modal="Hero">Детальнее</button>
+                
+                <!--More-->
+                <template id="Hero">
+                    <h2>Duo / Sqad</h2>
+                    <li>5 игр - 15$</li>
+                    <li>10 игр - 28$</li>
+                    <li>20 игр - 50$</li>
+                    <button>Заказать</button>
+                </template>
+            </div>
+            <div>
+                <!-- Face -->
+                <h2>Stats Boost</h2>
+                <li>Поднятие K/D</li>
+                <li>Повышение winrate</li>
+                <li>ТОП - 10</li>
+                <button data-modal="Battle">Детальнее</button>
+
+                <!--More-->
+                <template id="Battle">
+                    <h2>Stats Boost</h2>
+                    <li>Цена от 10$</li>
+                    <button>Заказать</button>
+                </template>
+            </div>
+            <div>
+                <!-- Face -->
+                <h2>Coaching</h2>
+                <li>1-5 часов тренеровки</li>
+                <li>Разбор демо</li>
+                <li>Aim / Positioning / Rotation / Late-game</li>
+                <li>Live-игра с подсказками</li>
+                <button data-modal="Coach">Детальнее</button>
+
+                <!--More-->
+                <template id="Coach">
+                    <h2>Coaching</h2>
+                    <li>1 час - 12$</li>
+                    <li>5 часов - 55$</li>
+                    <li>Разбор реплеев - 10$</li>
+                    <li>Live-игра с подсказками - 12$/час</li>
+                    <button>Заказать</button>
+                </template>
+            </div>
+
+            
+            
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="footer-col">
+        <h2>О нас</h2>
+        <p>Мы — современный каталог продуктов с удобным интерфейсом и честными ценами.</p>
+    </div>
+
+    <div class="footer-col">
+        <h2>Навигация</h2>
+        <ul>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Новинки</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col">
+        <h2>Поддержка</h2>
+        <ul>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+        </ul>
+    </div>
+</footer>
+    <script>
+        const buttons = document.querySelectorAll('.logins a');
+        const border = document.querySelector('.move-border');
+        const modal = document.getElementById('modal');
+        const modalBody = document.getElementById('modalBody');
+        const closeBtn = modal.querySelector('.close')
+
+        function moveBorder(btn) {
+            const rect = btn.getBoundingClientRect();
+            const parentRect = btn.parentElement.getBoundingClientRect();
+
+            border.style.left = rect.left - parentRect.left + 'px';
+            border.style.top = rect.top - parentRect.top + 'px';
+            border.style.width = rect.width + 'px';
+            border.style.height = rect.height + 'px';
+
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        window.addEventListener('load', () => {
+            moveBorder(document.querySelector('.logins .active'));
+        });
+
+
+        buttons.forEach(btn => {
+            btn.addEventListener('mouseenter', () => moveBorder(btn));
+        });
+
+        document.addEventListener('click', (e) =>{
+            const btn = e.target.closest('[data-modal]');
+            if (!btn) return;
+
+            const templateId = btn.dataset.modal;
+            const template = document.getElementById(templateId);
+
+            modalBody.innerHTML = '';
+            modalBody.append(template.content.cloneNode(true));
+
+            modal.classList.add('active');
+
+        });
+
+        closeBtn.addEventListener('click', () =>{
+            modal.classList.remove('active');
+        });
+
+        modal.addEventListener('click', (e) =>{
+            if (e.target === modal) modal.classList.remove('active')
+        })
+</script>
+</body>
+</html>
