@@ -11,7 +11,6 @@ body {
     min-height: 100vh;
 }
 
-/* ================= HEADER ================= */
 
 .header {
     display: flex;
@@ -32,7 +31,7 @@ body {
     font-weight: 700;
 }
 
-/* ================= NAV ================= */
+
 
 .nav {
     position: relative;
@@ -43,7 +42,7 @@ body {
     
 }
 
-/* NAV */
+
 .nav a {
     margin-right: 40px;
     text-decoration: none;
@@ -68,7 +67,7 @@ body {
     width: 100%;
 }
 
-/* ================= RIGHT ================= */
+
 
 .right {
     display: flex;
@@ -105,7 +104,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* ================= MAIN CONTENT ================= */
 
 .main-content {
     margin: 30px 40px;
@@ -118,7 +116,6 @@ body {
     color: #25553e;
 }
 
-/* ================= CATALOGUE ================= */
 
 .catalogue div {
     padding: 20px;
@@ -147,7 +144,6 @@ body {
     color: #25553e;
 }
 
-/* ================= PRODUCTS ================= */
 
 .products {
     display: grid;
@@ -190,7 +186,6 @@ body {
     opacity: 0.9;
 }
 
-/* ================= MODAL ================= */
 
 .modal {
     position: fixed;
@@ -233,7 +228,6 @@ body {
     cursor: pointer;
 }
 
-/* ================= FOOTER ================= */
 
 .footer {
     display: grid;
@@ -303,7 +297,6 @@ body {
 
 @media (max-width: 768px) {
 
-    /* HEADER */
     .header {
         flex-direction: column;
         gap: 20px;
@@ -323,18 +316,15 @@ body {
         justify-content: center;
     }
 
-    /* MAIN LAYOUT */
     .main-content {
         grid-template-columns: 1fr;
         margin: 20px;
     }
 
-    /* CATALOGUE */
     .catalogue div {
         margin-bottom: 20px;
     }
 
-    /* PRODUCTS */
     .products {
         grid-template-columns: 1fr;
     }
@@ -343,13 +333,11 @@ body {
         padding: 18px;
     }
 
-    /* MODAL */
     .modal-content {
         width: 90%;
         min-width: unset;
     }
 
-    /* FOOTER */
     .footer {
         grid-template-columns: 1fr;
         text-align: center;
