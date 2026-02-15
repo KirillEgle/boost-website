@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
+    <title>Магазин</title>
     <link rel="stylesheet" href="../style/shop.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,205 +12,196 @@
 </head>
 <body>
     <header class="header">
-    <div class="logo">
-        <img src="image/logoNoBG.png" alt="LOGO" width="200px" style="margin-left: 50px;">
-    </div>
-
-    <div class="right">
-        <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            
-            <a href="#">Help</a>
-        </nav>
-
-        <div class="logins">
-            <a href="login.html" class="log active">Login</a>
-            <a href="register.html" class="reg" onclick="locatiom.href='register.html'">Register</a>
-            <div class="move-border"></div>
+        <div class="logo">
+            <img src="image/logoNoBG.png" alt="ЛОГО" width="200px" style="margin-left: 50px;">
         </div>
-    </div>
+
+        <div class="right">
+            <nav class="nav">
+                <a href="index.html">Головна</a>
+                <a href="shop.html">Магазин</a>
+            </nav>
+
+            <div class="logins">
+                <a href="login.html" class="log active">Увійти</a>
+                <a href="register.html" class="reg" onclick="location.href='register.html'">Реєстрація</a>
+                <div class="move-border"></div>
+            </div>
+        </div>
     </header>
     
-            <div class="modal" id="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
+    <!-- Модальне вікно -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
 
-                    <div class="modal-body" id="modalBody"></div>
-                </div>
-            </div>
     <div class="main-content">
         <div class="catalogue">
             <div>
-                <h2>Games</h2>
+                <h2>Ігри</h2>
                 <li><a href="shop.html">Dota 2</a></li>
                 <li><a href="counters.html">Counter Strike 2</a></li>
                 <li><a href="leagueofl.html">League of Legends</a></li>
-                <li><a href="pubg.html">Pubg</a></li>
-                <li><a href="pubgm.html">Pubg Mobile</a></li>
+                <li><a href="pubg.html">PUBG</a></li>
+                <li><a href="pubgm.html">PUBG Mobile</a></li>
                 <li><a href="fortnite.html">Fortnite</a></li>
             </div>
         </div>
+
         <div class="products">
             <div>
-                <!-- Face -->
                 <h2>Буст MMR</h2>
                 <li>Буст MMR +500, +1000</li>
-                <li>Буст с одного ранга на другой</li>
-                <li>Соло / Пати буст</li>
-                <li>Выбор региона</li>
-                <button data-modal="MMR">Детальнее</button>
+                <li>Підвищення з одного рангу на інший</li>
+                <li>Соло / Паті буст</li>
+                <li>Вибір регіону</li>
+                <button data-modal="MMR">Детальніше</button>
 
-                <!--More-->
                 <template id="MMR">
                     <h2>Буст MMR</h2>
                     <li>+100 MMR - 5$</li>
                     <li>+300 MMR - 14$</li>
                     <li>+500 MMR - 22$</li>
                     <li>+1000 MMR - 42$</li>
-                    <p>Соло буст - включено<br>Пати буст - +30% к цене</p>
+                    <p>Соло буст - включено<br>Паті буст - +30% до ціни</p>
 
-                    <h2>Буст по рангам</h2>
+                    <h2>Буст за рангами</h2>
                     <li>Crusader -> Archon - 35$</li>
                     <li>Archon -> Legend - 45$</li>
                     <li>Legend -> Divine - 85$</li>
-                    <li>Divine -> Immortal - По договорённости</li>
-                    <button>Заказать</button>
+                    <li>Divine -> Immortal - За домовленістю</li>
+                    <button>Замовити</button>
                 </template>
             </div>
-            <div>
-                <!-- Face -->
-                <h2>Калибровка аккаунта</h2>
-                <li>10 калбровочных игр</li>
-                <li>Соло / Пати</li>
-                <li>С границей минимального ранга</li>
-                <li>Скрытый буст MMR буст</li>
-                <button data-modal="Cal">Детальнее</button>
 
-                <!--More-->
+            <div>
+                <h2>Калібрування акаунта</h2>
+                <li>10 калібрувальних ігор</li>
+                <li>Соло / Паті</li>
+                <li>З межами мінімального рангу</li>
+                <li>Прихований буст MMR</li>
+                <button data-modal="Cal">Детальніше</button>
+
                 <template id="Cal">
-                    <h2>Каллибровка аккаунта</h2>
-                    <li>Стандартная каллибровка - 25$</li>
-                    <li>С градацией ранга - 35$</li>
-                    <li>Пати-калибровка - 40$</li>
-                    <button>Заказать</button>
+                    <h2>Калібрування акаунта</h2>
+                    <li>Стандартне калібрування - 25$</li>
+                    <li>З градацією рангу - 35$</li>
+                    <li>Паті-калібрування - 40$</li>
+                    <button>Замовити</button>
                 </template>
             </div>
-            <div>
-                <!-- Face -->
-                <h2>WIN Boost</h2>
-                <li>5 / 10 / 20 побед</li>
-                <li>Соло или Пати</li>
-                <li>Без резких скачков</li>
-                <button data-modal="Win">Детальнее</button>
 
-                <!--More-->
+            <div>
+                <h2>WIN Буст</h2>
+                <li>5 / 10 / 20 перемог</li>
+                <li>Соло або Паті</li>
+                <li>Без різких стрибків</li>
+                <button data-modal="Win">Детальніше</button>
+
                 <template id="Win">
-                    <h2>WIN Boost</h2>
-                    <li>5 побед - 12$</li>
-                    <li>10 побед - 22$</li>
-                    <li>20 побед - 40$</li>
-                    <button>Заказать</button>
+                    <h2>WIN Буст</h2>
+                    <li>5 перемог - 12$</li>
+                    <li>10 перемог - 22$</li>
+                    <li>20 перемог - 40$</li>
+                    <button>Замовити</button>
                 </template>
             </div>
+
             <div>
-                <!-- Face -->
-                <h2>Role Boost</h2>
+                <h2>Role Буст</h2>
                 <li>Carry / Mid / Offlane / Support</li>
-                <li>Без Смены роли</li>
-                <button data-modal="Role">Детальнее</button>
+                <li>Без зміни ролі</li>
+                <button data-modal="Role">Детальніше</button>
 
-                <!--More-->
                 <template id="Role">
-                    <h2>Role Boost</h2>
-                    <li>+300 MMR на роли - 18$</li>
-                    <li>+500 MMR на роли - 35$</li>
-                    <li>Пати-калибровка - 40$</li>
-                    <button>Заказать</button>
+                    <h2>Role Буст</h2>
+                    <li>+300 MMR на ролі - 18$</li>
+                    <li>+500 MMR на ролі - 35$</li>
+                    <li>Паті-калібрування - 40$</li>
+                    <button>Замовити</button>
                 </template>
             </div>
+
             <div>
-                <!-- Face -->
-                <h2>Hero Boost</h2>
-                <li>10 / 20 / 30 игр на одном герое</li>
-                <li>Поднятие винрейта</li>
-                <li>Для статистики / смурфов</li>
-                <button data-modal="Hero">Детальнее</button>
+                <h2>Hero Буст</h2>
+                <li>10 / 20 / 30 ігор на одному герої</li>
+                <li>Підвищення винрейту</li>
+                <li>Для статистики / смурфів</li>
+                <button data-modal="Hero">Детальніше</button>
                 
-                <!--More-->
                 <template id="Hero">
-                    <h2>Hero Boost</h2>
-                    <li>10 игр - 10$</li>
-                    <li>20 игр - 18$</li>
-                    <li>30 игр - 25$</li>
-                    <button>Заказать</button>
+                    <h2>Hero Буст</h2>
+                    <li>10 ігор - 10$</li>
+                    <li>20 ігор - 18$</li>
+                    <li>30 ігор - 25$</li>
+                    <button>Замовити</button>
                 </template>
             </div>
-            <div>
-                <!-- Face -->
-                <h2>Ballte Pass / Ивенты</h2>
-                <li>Выполнение квестов</li>
-                <li>Ап уровней</li>
-                <li>Прохожднение ивентов</li>
-                <button data-modal="Battle">Детальнее</button>
 
-                <!--More-->
+            <div>
+                <h2>Battle Pass / Івенти</h2>
+                <li>Виконання квестів</li>
+                <li>Прокачування рівнів</li>
+                <li>Проходження івентів</li>
+                <button data-modal="Battle">Детальніше</button>
+
                 <template id="Battle">
-                    <h2>Battke Pass / Ивенты</h2>
-                    <li>Выполнение квестов - от 10$</li>
-                    <li>Ап 50 уровней Battle Pass - 25$</li>
-                    <li>Ап 100 уровней - 45$</li>
-                    <button>Заказать</button>
+                    <h2>Battle Pass / Івенти</h2>
+                    <li>Виконання квестів - від 10$</li>
+                    <li>Прокачка 50 рівнів Battle Pass - 25$</li>
+                    <li>Прокачка 100 рівнів - 45$</li>
+                    <button>Замовити</button>
                 </template>
             </div>
+
             <div>
-                <!-- Face -->
-                <h2>Coaching</h2>
-                <li>1-5 часов тренеровки</li>
-                <li>Разбор реплеев</li>
-                <li>Обучение роли или героя</li>
-                <li>Live-игра с подсказками</li>
-                <button data-modal="Coach">Детальнее</button>
+                <h2>Тренування / Coaching</h2>
+                <li>1-5 годин тренування</li>
+                <li>Аналіз реплеїв</li>
+                <li>Навчання ролі або героя</li>
+                <li>Live-гра з підказками</li>
+                <button data-modal="Coach">Детальніше</button>
 
-                <!--More-->
                 <template id="Coach">
-                    <h2>Coaching</h2>
-                    <li>1 час - 10$</li>
-                    <li>5 часов - 45$</li>
-                    <li>Разбор реплеев - 8$</li>
-                    <li>Live-игра с подсказками - 12$/час</li>
-                    <button>Заказать</button>
+                    <h2>Тренування / Coaching</h2>
+                    <li>1 година - 10$</li>
+                    <li>5 годин - 45$</li>
+                    <li>Аналіз реплеїв - 8$</li>
+                    <li>Live-гра з підказками - 12$/год</li>
+                    <button>Замовити</button>
                 </template>
             </div>
-
-            
-            
         </div>
     </div>
+
     <footer class="footer">
-    <div class="footer-col">
-        <h2>О нас</h2>
-        <p>Мы — современный каталог продуктов с удобным интерфейсом и честными ценами.</p>
-    </div>
+        <div class="footer-col">
+            <h2>Про нас</h2>
+            <p>Ми — сучасний каталог продуктів з зручним інтерфейсом та чесними цінами.</p>
+        </div>
 
-    <div class="footer-col">
-        <h2>Навигация</h2>
-        <ul>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Акции</a></li>
-            <li><a href="#">Новинки</a></li>
-        </ul>
-    </div>
+        <div class="footer-col">
+            <h2>Навігація</h2>
+            <ul>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Акції</a></li>
+                <li><a href="#">Новинки</a></li>
+            </ul>
+        </div>
 
-    <div class="footer-col">
-        <h2>Поддержка</h2>
-        <ul>
-            <li><a href="#">Контакты</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Политика конфиденциальности</a></li>
-        </ul>
-    </div>
-</footer>
+        <div class="footer-col">
+            <h2>Підтримка</h2>
+            <ul>
+                <li><a href="#">Контакти</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Політика конфіденційності</a></li>
+            </ul>
+        </div>
+    </footer>
+
     <script>
         const buttons = document.querySelectorAll('.logins a');
         const border = document.querySelector('.move-border');
@@ -235,7 +226,6 @@
             moveBorder(document.querySelector('.logins .active'));
         });
 
-
         buttons.forEach(btn => {
             btn.addEventListener('mouseenter', () => moveBorder(btn));
         });
@@ -251,7 +241,6 @@
             modalBody.append(template.content.cloneNode(true));
 
             modal.classList.add('active');
-
         });
 
         closeBtn.addEventListener('click', () =>{
@@ -261,6 +250,6 @@
         modal.addEventListener('click', (e) =>{
             if (e.target === modal) modal.classList.remove('active')
         })
-</script>
+    </script>
 </body>
 </html>
